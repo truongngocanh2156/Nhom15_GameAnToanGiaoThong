@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Gara Xe Của Bạn</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <img src="assets/textures/Cursor.png" id="custom-cursor" alt="Cursor" draggable="false">
+
+    <button id="audioToggle">Audio</button>
+
+    <!-- SIDEBAR MENU - HOÀNG TỬ ẾCH -->
+    <button id="sidebarToggle" class="sidebar-toggle">
+        🐸 MENU
+    </button>
+
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <div class="header-content">
+                <span class="magic-star">✨</span>
+                <h2>HOÀNG TỬ ẾCH</h2>
+            </div>
+            <button id="sidebarClose" class="close-btn">✕</button>
+        </div>
+        
+        <div class="sidebar-content">
+            <div class="menu-item" data-modal="guide">
+                📖 <span>Hướng dẫn chơi</span>
+            </div>
+            <div class="menu-item" data-modal="rules">
+                ⚖️ <span>Luật chơi</span>
+            </div>
+
+            <div class="menu-item" data-modal="credits">
+                👑 <span>Nhà sản xuất</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALS -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">✕</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <div id="welcomeScreen">
+        <img src="assets/gif/lizard.gif" class="welcome-lizard" alt="Lizard">
+        <div class="welcome-content">
+                <div class="welcome-header">
+                    <img src="assets/images/logo-frogcoco.png" alt="Logo" class="logo-img">
+                    <span class="logo-text">Frogcoco</span>
+                </div>
+
+            <div class="image-slider-frame">
+                <div class="slides-container" id="slidesContainer">
+                    <img src="assets/gif/Kermit The Frog Film GIF.gif" alt="Ếch đi xe 1">
+                    <img src="assets/gif/On My Way Bike GIF.gif" alt="Ếch đi xe 2">
+                    <img src="assets/gif/muppets bikes GIF.gif" alt="Ếch đi xe">
+                </div>
+                <div class="dots-wrapper">
+                    <span class="slider-dot active"></span>
+                    <span class="slider-dot"></span>
+                    <span class="slider-dot"></span>
+                </div>
+            </div>
+
+            <h1 class="welcome-title">AN TOÀN GIAO THÔNG</h1>
+
+            <div class="slider-unlock-container">
+                <div class="unlock-track" id="sliderTrack">
+                    <div class="unlock-thumb" id="sliderThumb">
+                        <img src="assets/images/avatar-icon.png" alt="Avatar" draggable="false">
+                    </div>
+                    <span class="unlock-text">Lướt để bắt đầu</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button id="audioToggle">ON AUDIO</button>
+        <div id="ui-lobby">
+
+            <div class="lobby-section" id="car-section">
+                <div class="section-title">CHỌN XE</div>
+                <div class="car-selector" id="car-selector">
+                    <button class="car-btn active" onclick="selectCar('car.glb', event)">Cá Sấu</button>
+                    <button class="car-btn" onclick="selectCar('car2.glb', event)">Mèo</button>
+                    <button class="car-btn" onclick="selectCar('banana_car.glb', event)">Chuối</button>
+                </div>
+            </div>
+
+            <div class="lobby-section" id="map-section" style="display:none;">
+                <div class="section-title">CHỌN MAP</div>
+                <div class="map-selector" id="map-selector">
+                    <button class="car-btn map-btn active" onclick="selectMap(1, event)">Đến trường UET</button>
+                    <button class="car-btn map-btn" onclick="selectMap(2, event)">Công viên Thống Nhất</button>
+                </div>
+            </div>
+
+            <div class="lobby-section" id="quiz-topic-section">
+                <div class="section-title">CHỦ ĐỀ ÔN TẬP</div>
+                <div class="custom-dropdown" id="quizDropdown">
+                    <button class="dropdown-btn" id="dropdownBtn" type="button">
+                        <span id="selectedLabel">Tất cả chủ đề</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div class="dropdown-list" id="dropdownList">
+                        <div class="dropdown-item selected" data-value="all">📚 Tất cả chủ đề</div>
+                        <div class="dropdown-item" data-value="bien_bao">🚦 Biển báo giao thông</div>
+                        <div class="dropdown-item" data-value="khai_niem">📖 Khái niệm & Quy tắc</div>
+                        <div class="dropdown-item" data-value="tinh_huong">🚗 Tình huống thực tế</div>
+                    </div>
+                </div>
+                <input type="hidden" id="quizTopicSelect" value="all">
+            </div>
+
+            <div class="lobby-section" id="customize-section">
+                <div class="section-title">CUSTOMIZE</div>
+                <div class="color-options">
+                    <div class="colorPicker">
+                        <label>Sơn xe</label>
+                        <input id="body-color" type="color" value="#00aa00">
+                    </div>
+                    <div class="colorPicker">
+                        <label>Bánh xe</label>
+                        <input id="details-color" type="color" value="#8A2BE2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="lobby-section" style="flex-direction: row !important; gap: 15px; align-items: center !important;">
+                <button id="btn-back" style="display: none;">BACK</button>
+                <button id="btn-start">NEXT</button>
+            </div>
+
+        </div>
+
+    <div id="container"></div>
+
+    <div id="scene-container">
+        <div id="menu-screen" class="screen active">
+            </div>
+
+        <div id="map-screen" class="screen next">
+            </div>
+    </div>
+
+
+    
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+        let camera, scene, renderer, controls, carGroup;
+        let currentCarModel = 'car.glb';
+        let selectedMap = 1;  
+        let lobbyStep = 1; 
+
+        let carTargetX = 0;
+        let carTargetScale = 1;
+        
+        const carConfigs = {
+            'car.glb': { bodyParts: ['Object_4', 'Object_7'], wheelParts: ['Object_14'], scale: 5.0, rotationY: 0 },
+            'car2.glb': { bodyParts: ['Cabine_1_0'], wheelParts: ['Weel_low_1_0'], scale: 0.5, rotationY: -Math.PI/2 },
+            'banana_car.glb': { bodyParts: ['body'], wheelParts: ['tire', 'tire_2', 'tire_3'], scale:0.02, rotationY: 0 }
+        };
+
+        const bodyMaterial = new THREE.MeshStandardMaterial({ color: 0x00aa00, roughness: 0.3 });
+        const detailsMaterial = new THREE.MeshStandardMaterial({ color: 0x8A2BE2, roughness: 0.5 });
+
+        function init() {
+            const container = document.getElementById('container');
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x87ceeb);
+
+            camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+            camera.position.set(0, 20, 40); 
+
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setAnimationLoop(animate);
+            renderer.shadowMap.enabled = true;
+            renderer.shadowMap.type = THREE.VSMShadowMap;
+            container.appendChild(renderer.domElement);
+
+            controls = new OrbitControls(camera, renderer.domElement);
+            controls.target.set(0, 2, 0);
+            controls.update();
+
+            const hemiLight = new THREE.HemisphereLight(0xffffff, 0x90ee90, 1.2);
+            scene.add(hemiLight);
+            const sunLight = new THREE.DirectionalLight(0xfffdd0, 2.5);
+            sunLight.position.set(10, 15, 10);
+            sunLight.castShadow = true;
+            scene.add(sunLight);
+
+            const godRayGroup = new THREE.Group();
+            function createRayLayer(radius, opacity) {
+                const geo = new THREE.CylinderGeometry(0.1, radius, 400, 64, 1, true);
+                geo.translate(0, 100, 0); 
+                const mat = new THREE.MeshBasicMaterial({
+                    color: 0xffffee, transparent: true, opacity: opacity,
+                    blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide
+                });
+                return new THREE.Mesh(geo, mat);
+            }
+            godRayGroup.add(createRayLayer(8, 0.05));  
+            godRayGroup.add(createRayLayer(14, 0.02)); 
+            godRayGroup.add(createRayLayer(20, 0.008)); 
+            godRayGroup.position.set(0, 0, 0);
+            godRayGroup.rotation.z = -Math.PI / 8; 
+            scene.add(godRayGroup);
+
+            carGroup = new THREE.Group();
+            scene.add(carGroup);
+
+            const loader = new GLTFLoader();
+
+            window.loadCar = function(modelName) {
+                while(carGroup.children.length > 0){ carGroup.remove(carGroup.children[0]); }
+                currentCarModel = modelName;
+                const config = carConfigs[modelName];
+                
+                loader.load('assets/models/' + modelName, function (gltf) {
+                    const myCar = gltf.scene;
+                    if (config) {
+                        myCar.scale.set(config.scale, config.scale, config.scale);
+                        myCar.rotation.y = config.rotationY;
+                    }
+
+                    myCar.traverse((child) => {
+                        if (child.isMesh) {
+                            child.castShadow = true;
+                            if (config.bodyParts.includes(child.name)) { child.material = bodyMaterial; }
+                            if (config.wheelParts.includes(child.name)) { child.material = detailsMaterial; }
+                        }
+                    });
+                    carGroup.add(myCar);
+                });
+            }
+
+            loadCar('car.glb');
+
+            loader.load('assets/models/showroom2.glb', function (gltf) {
+                const showroom = gltf.scene;
+                showroom.scale.set(10, 10, 10);
+                showroom.position.set(-5, -40, 0);
+                showroom.traverse((node) => {
+                    if (node.isMesh) { node.receiveShadow = true; node.castShadow = true; }
+                });
+                scene.add(showroom);
+            });
+
+            window.selectCar = function(name, e) {
+                loadCar(name);
+                document.querySelectorAll('#car-selector .car-btn').forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+            };
+
+            window.selectMap = function(mapId, e) {
+                selectedMap = mapId;
+                document.querySelectorAll('.map-btn').forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+            };
+
+            document.getElementById('body-color').addEventListener('input', function() { bodyMaterial.color.set(this.value); });
+            document.getElementById('details-color').addEventListener('input', function() { detailsMaterial.color.set(this.value); });
+
+            document.getElementById('btn-start').addEventListener('click', () => {
+                if (lobbyStep === 1) {
+                    lobbyStep = 2;
+
+                    localStorage.setItem('selectedCarModel', currentCarModel);
+
+                    document.getElementById('btn-start').innerText = 'START';
+                    document.getElementById('btn-back').style.display = 'inline-block';
+
+                    document.querySelector('#car-section').style.display = 'none';
+                    document.querySelector('#quiz-topic-section').style.display = 'none';
+                    document.querySelector('#customize-section').style.display = 'none';
+
+                    const mapSection = document.getElementById('map-section');
+                    mapSection.style.display = 'flex';
+                    mapSection.style.opacity = '0';
+                    mapSection.style.transform = 'translateY(20px)';
+
+                    setTimeout(() => {
+                        mapSection.style.transition = '0.4s ease';
+                        mapSection.style.opacity = '1';
+                        mapSection.style.transform = 'translateY(0)';
+                    }, 10);  
+            
+                    carTargetScale = 1.5;
+                    return;
+                }
+
+                if (lobbyStep === 2) {
+                    localStorage.setItem('carBodyColor', document.getElementById('body-color').value);
+                    localStorage.setItem('carDetailsColor', document.getElementById('details-color').value);
+                    localStorage.setItem('selectedMap', selectedMap);
+                    
+                    const selectedTopic = document.getElementById('quizTopicSelect').value;
+                    localStorage.setItem('selectedQuizTopic', selectedTopic);
+
+                    sessionStorage.setItem('coVeVaoGame', 'true');
+
+                    setTimeout(() => {
+                        window.location.href = 'game.html';
+                    }, 300);
+                }
+            });
+
+            document.getElementById('btn-back').addEventListener('click', () => {
+                if (lobbyStep === 2) {
+                    lobbyStep = 1;
+
+                    document.getElementById('btn-start').innerText = 'NEXT';
+                    document.getElementById('btn-back').style.display = 'none';
+
+                    const mapSection = document.getElementById('map-section');
+                    mapSection.style.opacity = '0';
+                    mapSection.style.transform = 'translateY(20px)';
+
+                    setTimeout(() => {
+                        mapSection.style.display = 'none';
+                        document.querySelector('#car-section').style.display = 'flex';
+                        document.querySelector('#quiz-topic-section').style.display = 'flex';
+                        document.querySelector('#customize-section').style.display = 'flex';
+                    }, 400);
+
+                    carTargetScale = 1;
+                }
+            });
+
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+        }
+
+        function animate() {
+            controls.update();
+            const time = performance.now() / 1000;
+            carGroup.rotation.y = Math.sin(time * 0.5) * 0.2;
+            carGroup.position.y = 4 + Math.sin(time * 2) * 0.3;
+            renderer.render(scene, camera);
+            carGroup.position.x += (carTargetX - carGroup.position.x) * 0.08;
+
+            carGroup.scale.x += (carTargetScale - carGroup.scale.x) * 0.08;
+            carGroup.scale.y += (carTargetScale - carGroup.scale.y) * 0.08;
+            carGroup.scale.z += (carTargetScale - carGroup.scale.z) * 0.08;
+        }
+
+        // Custom dropdown chủ đề
+        const dropBtn = document.getElementById('dropdownBtn');
+        const dropList = document.getElementById('dropdownList');
+        const dropInput = document.getElementById('quizTopicSelect');
+
+        dropBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropBtn.classList.toggle('open');
+        dropList.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', () => {
+            document.querySelectorAll('.dropdown-item').forEach(i => i.classList.remove('selected'));
+            item.classList.add('selected');
+            document.getElementById('selectedLabel').textContent = item.textContent.trim();
+            dropInput.value = item.dataset.value;
+            dropBtn.classList.remove('open');
+            dropList.classList.remove('open');
+        });
+        });
+
+        document.addEventListener('click', () => {
+        dropBtn.classList.remove('open');
+        dropList.classList.remove('open');
+        });
+
+        init();
+
+        /* =========================================
+        HỆ THỐNG ÂM THANH NỀN (BGM) & TIẾNG ĐỘNG LỰC
+        ========================================= */
+        const clickSfx = new Audio('assets/textures/pop_sound.mp3'); 
+        clickSfx.volume = 0.8; 
+        
+        const bgmMusic = new Audio('assets/textures/Golden Hour.mp3');
+        bgmMusic.loop = true; 
+        bgmMusic.volume = 0.4;
+
+        const bgmNature = new Audio('assets/textures/rung.mp3');
+        bgmNature.loop = true; 
+        bgmNature.volume = 0.5;
+
+        let isGoldenHourPlaying = false; 
+
+        let playNaturePromise = bgmNature.play();
+        if (playNaturePromise !== undefined) {
+            playNaturePromise.catch(error => {
+                document.body.addEventListener('click', function firstInteraction() {
+                    if (!isGoldenHourPlaying) { bgmNature.play(); }
+                    document.body.removeEventListener('click', firstInteraction);
+                }, { once: true });
+            });
+        }
+
+        audioBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); 
+            if (!isGoldenHourPlaying) {
+                bgmNature.pause();
+                bgmMusic.play().catch(e => console.log("Lỗi: ", e));
+                audioBtn.innerHTML = 'OFF AUDIO';
+                audioBtn.style.background = '#e74c3c'; 
+                audioBtn.style.boxShadow = '0 6px 0 #c0392b';
+                isGoldenHourPlaying = true;
+            } else {
+                bgmMusic.pause();
+                bgmNature.play().catch(e => console.log("Lỗi: ", e));
+                audioBtn.innerHTML = 'ON AUDIO';
+                audioBtn.style.background = '#9b59b6'; 
+                audioBtn.style.boxShadow = '0 6px 0 #8e44ad';
+                isGoldenHourPlaying = false;
+            }
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const clickableElements = document.querySelectorAll('.car-btn, .colorPicker input, #btn-start, #btn-back, #audioToggle, .topic-select');
+            clickableElements.forEach(target => {
+                target.addEventListener('mousedown', () => {
+                    clickSfx.currentTime = 0; 
+                    clickSfx.play().catch(e => {});
+                });
+            });
+        });
+
+        /* =========================================
+        HIỆU ỨNG CHUỘT (SVG PIXEL INLINE)
+        ========================================= */
+        const customCursor = document.getElementById('custom-cursor');
+        let mouseX = -100, mouseY = -100;
+        let lastSparkleX = 0, lastSparkleY = 0;
+
+        const pixelAssets = [
+            { url: `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 10"><path d="M2,0h2v1H2zM7,0h2v1H7zM1,1h4v1H1zM6,1h4v1H6zM0,2h11v3H0zM1,5h9v1H1zM2,6h7v1H2zM3,7h5v1H3zM4,8h3v1H4zM5,9h1v1H5z" fill="%23b49eff"/></svg>`, size: 18 },
+            { url: `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 7"><path d="M3,0h1v2h2v1H4v2H3V3H1V2h2z" fill="%23ffec6e"/></svg>`, size: 14 },
+            { url: `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 7"><path d="M3,0h1v2h2v1H4v2H3V3H1V2h2z" fill="%23ff9ebb"/></svg>`, size: 14 },
+            { url: `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 7"><path d="M3,0h1v2h2v1H4v2H3V3H1V2h2z" fill="%239edfff"/></svg>`, size: 14 }
+        ];
+
+        function createSparkle(x, y, isBurst = false) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            const asset = pixelAssets[Math.floor(Math.random() * pixelAssets.length)];
+            sparkle.style.backgroundImage = `url('${asset.url}')`;
+            const scale = Math.random() * 0.5 + 0.8; 
+            const finalSize = asset.size * scale;
+            sparkle.style.width = finalSize + 'px';
+            sparkle.style.height = finalSize + 'px';
+            const offsetX = (Math.random() - 0.5) * 15;
+            const offsetY = (Math.random() - 0.5) * 15;
+            sparkle.style.left = (x + offsetX - finalSize/2) + 'px'; 
+            sparkle.style.top = (y + offsetY - finalSize/2) + 'px';
+            const spreadRadius = isBurst ? 100 : 40; 
+            const endX = (Math.random() - 0.5) * 2 * spreadRadius; 
+            const endY = (Math.random() - 0.5) * 2 * spreadRadius + (isBurst ? 0 : 30); 
+            sparkle.style.setProperty('--end-x', `${endX}px`);
+            sparkle.style.setProperty('--end-y', `${endY}px`);
+            const duration = 0.6 + Math.random() * 0.6; 
+            sparkle.style.animationDuration = duration + 's';
+            document.body.appendChild(sparkle);
+            setTimeout(() => { sparkle.remove(); }, duration * 1000);
+        }
+
+        setInterval(() => {
+            if (mouseX > 0 && mouseY > 0 && Math.random() > 0.3) {
+                createSparkle(mouseX, mouseY);
+            }
+        }, 150); 
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX; mouseY = e.clientY;
+            customCursor.style.left = mouseX + 'px';
+            customCursor.style.top = mouseY + 'px';
+            const distance = Math.hypot(mouseX - lastSparkleX, mouseY - lastSparkleY);
+            if (distance > 15) {
+                createSparkle(mouseX, mouseY);
+                lastSparkleX = mouseX;
+                lastSparkleY = mouseY;
+            }
+        });
+
+        document.addEventListener('mousedown', () => {
+            customCursor.style.transform = 'translate(-10%, -10%) scale(0.8) rotate(-10deg)';
+            for(let i = 0; i < 12; i++) {
+                createSparkle(mouseX, mouseY, true);
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            customCursor.style.transform = 'translate(-10%, -10%) scale(1) rotate(0deg)';
+        });
+    </script>
+        <script>
+        // --- 1. SLIDER ẢNH TỰ ĐỘNG ---
+        const slides = document.getElementById('slidesContainer');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+
+        if (slides) {
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % 3; 
+                slides.style.transform = `translateX(-${currentSlide * 33.333}%)`;
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }, 3000);
+        }
+
+        // --- 2. THANH LƯỚT VÀ GỌI AUDIO ---
+        const thumb = document.getElementById('sliderThumb');
+        const track = document.getElementById('sliderTrack');
+        const welcome = document.getElementById('welcomeScreen');
+        const audioBtn = document.getElementById('audioToggle'); // Gắn lại biến Audio
+
+        let dragging = false;
+        let startX = 0;
+
+        function startDrag(clientX) {
+            dragging = true;
+            startX = clientX - thumb.offsetLeft;
+            thumb.style.transition = 'none';
+            thumb.classList.add('is-dragging');
+        }
+
+        function onDrag(clientX) {
+            if (!dragging) return;
+            let x = clientX - startX;
+            const maxX = track.offsetWidth - thumb.offsetWidth - 8;
+            if (x < 8) x = 8;
+            if (x > maxX) x = maxX;
+            thumb.style.left = x + 'px';
+
+            if (x >= maxX * 0.98) {
+                dragging = false;
+                unlock();
+            }
+        }
+
+        function endDrag() {
+            if (!dragging) return;
+            dragging = false;
+            thumb.classList.remove('is-dragging');
+            thumb.style.transition = 'left 0.4s ease-out';
+            thumb.style.left = '8px';
+        }
+
+        if (thumb) {
+            thumb.addEventListener('mousedown', (e) => startDrag(e.clientX));
+            document.addEventListener('mousemove', (e) => onDrag(e.clientX));
+            document.addEventListener('mouseup', endDrag);
+
+            // Hỗ trợ lướt bằng điện thoại/ipad
+            thumb.addEventListener('touchstart', (e) => startDrag(e.touches[0].clientX), {passive: true});
+            document.addEventListener('touchmove', (e) => onDrag(e.touches[0].clientX), {passive: true});
+            document.addEventListener('touchend', endDrag);
+        }
+
+        // --- HÀM MỞ KHÓA VÀO GAME (CHUẨN NHẤT) ---
+        function unlock() {
+            welcome.style.opacity = '0';
+            welcome.style.pointerEvents = 'none';
+            
+            setTimeout(() => {
+                welcome.style.display = 'none';
+                
+                // 1. Ẩn chuột mặc định đi để gậy phép thuật tỏa sáng
+                document.body.classList.add('in-game');
+                
+                // 2. Hiện lại Nút Audio đã bị làm mất
+                if (audioBtn) {
+                    audioBtn.style.display = 'block';
+                    audioBtn.style.opacity = '1';
+                }
+            }, 500);
+        }
+
+        // ====================== SIDEBAR & MODAL ======================
+        const sidebar = document.getElementById('sidebar');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebarClose = document.getElementById('sidebarClose');
+        const modal = document.getElementById('modal');
+        const modalBody = document.getElementById('modal-body');
+        const modalClose = document.querySelector('.modal-close');
+
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+
+        sidebarClose.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+        });
+
+        modalClose.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Click menu item
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const modalType = item.dataset.modal;
+                showModal(modalType);
+                sidebar.classList.remove('open');
+            });
+        });
+
+        // Music menu
+        document.getElementById('music-menu').addEventListener('click', () => {
+            const audioBtn = document.getElementById('audioToggle');
+            if (audioBtn) audioBtn.click();  // Kích hoạt nút audio hiện có
+            sidebar.classList.remove('open');
+        });
+
+        function showModal(type) {
+            let html = '';
+
+            if (type === 'guide') {
+                html = `
+                    <h3>📖 Hướng dẫn chơi</h3>
+                    <p><strong>Chào mừng đến với hành trình của Hoàng tử Ếch! 🐸✨</strong></p>
+                    <p><strong>Nhiệm vụ của bạn là lái xe đến đích an toàn, tuân thủ luật giao thông như một “hiệp sĩ đường phố”.</strong></p>
+                    <p><strong>Trên đường đi, nếu mắc sai lầm, bạn sẽ phải vượt qua các câu hỏi để tiếp tục hành trình. Vừa chơi, vừa học, giúp bạn tham gia giao thông an toàn và thông minh hơn mỗi ngày. 🚦🌿</strong></p>
+                    <ul>
+                        <li><strong>WASD</strong> hoặc <strong>Mũi tên</strong>: Lái xe</li>
+                        <li>Tránh va chạm với xe khác và vỉa hè</li>
+                        <li>Tuân thủ đèn giao thông (đỏ = dừng)</li>
+                        <li>Va chạm vào chướng ngại vật (cây, biển báo...) sẽ hiện câu hỏi</li>
+                        <li>Đến được ô đích màu xanh để hoàn thành màn</li>
+                    </ul>
+                `;
+            } 
+            else if (type === 'rules') {
+                html = `
+                    <h3>⚖️ Luật chơi</h3>
+                    <p><strong>Mục tiêu:</strong> Lái xe an toàn đến đích trong thời gian quy định, trả lời đúng càng nhiều câu hỏi càng tốt.</p>
+                    <ul>
+                        <li>Không được vượt đèn đỏ</li>
+                        <li>Trả lời đúng câu hỏi để tiếp tục</li>
+                        <li>Va chạm xe NPC sẽ làm mất thời gian và tốc độ</li>
+                        <li>Hoàn thành càng nhanh + càng ít va chạm = điểm cao hơn</li>
+                    </ul>
+                `;
+            } 
+            else if (type === 'credits') {
+                html = `
+                    <h3>FROGCOCO STUDIO</h3>
+                    <p><strong>1.</strong> Trương Ngọc Anh - mssv: 24022944</p>
+                    <p><strong>2.</strong> Nguyễn Nhật Linh - mssv: 24023020</p>
+                    <p><strong>3.</strong> Cao Thùy Giang - mssv: 24022980</p>
+                    <p><strong>4.</strong> Nguyễn Phương Thảo - mssv: 24023068</p>
+                    <p><strong>5.</strong> Nguyễn Thị Anh Vi - mssv: 24023092</p>
+                    <br>
+                    <h4>🎯 Mục tiêu của game:</h4>
+                    <p>Mục tiêu của trò chơi không chỉ dừng lại ở việc giải trí, mà còn hướng đến việc xây dựng nhận thức và hình thành thói quen tham gia giao thông an toàn cho người chơi. Thông qua việc nhập vai vào một người điều khiển phương tiện trong môi trường giao thông mô phỏng, người chơi sẽ được trải nghiệm những tình huống gần gũi với thực tế, từ đó rèn luyện khả năng quan sát, phản xạ và đưa ra quyết định đúng đắn khi di chuyển trên đường. Cuối cùng, mục tiêu lớn nhất của trò chơi là góp phần nâng cao ý thức cộng đồng về an toàn giao thông, đặc biệt đối với học sinh, sinh viên – những đối tượng đang trong giai đoạn hình thành thói quen. Thông qua trải nghiệm vừa học vừa chơi, người chơi sẽ nhận ra rằng việc tuân thủ luật giao thông không chỉ là nghĩa vụ mà còn là cách bảo vệ chính bản thân và những người xung quanh.</p>
+                `;
+            }
+
+            modalBody.innerHTML = html;
+            modal.style.display = 'flex';
+        }
+
+        // Đóng modal khi click ngoài
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) modal.style.display = 'none';
+        });
+
+    </script>
+   
+</body>
+</html>

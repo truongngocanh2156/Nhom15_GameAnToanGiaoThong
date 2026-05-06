@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Chọn Map</title>
+<style>
+body {
+    background: #111;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+}
+
+.map-btn {
+    margin: 20px;
+    padding: 20px 40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h1>Chọn Map</h1>
+
+<button class="map-btn" onclick="chooseMap(1)">
+    Đường đến UET
+</button>
+
+<button class="map-btn" onclick="chooseMap(2)">
+    Công viên Thống Nhất
+</button>
+
+<script>
+function chooseMap(id) {
+    localStorage.setItem('selectedMap', id);
+
+    sessionStorage.setItem('coVeVaoGame', 'true');
+
+    window.location.href = 'game.html';
+}
+</script>
+
+</body>
+</html>

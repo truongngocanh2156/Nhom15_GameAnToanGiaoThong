@@ -1,0 +1,1119 @@
+{
+  "gameTitle": "Trắc nghiệm Giao thông",
+  "questions": [
+    {
+      "id": 1,
+      "type": "bien_bao",
+      "question": "Đây là biển gì?",
+      "options": [
+        "Nơi giao nhau chạy theo vòng xuyến",
+        "Ngã 3",
+        "Cấm quay xe"
+      ],
+      "answer": "Nơi giao nhau chạy theo vòng xuyến",
+      "feedback": "Good job! Đây chính là biển báo đi theo vòng xuyến.",
+      "image": "assets/textures/1.webp"
+    },
+    {
+      "id": 2,
+      "type": "bien_bao",
+      "question": "Đây là biển gì?",
+      "options": [
+        "Đường người đi bộ cắt ngang",
+        "Cấm người đi bộ",
+        "Đường dành cho người đi bộ"
+      ],
+      "answer": "Đường dành cho người đi bộ",
+      "feedback": "Tuyệt vời! Biển xanh này là đường dành cho người đi bộ nhé.",
+      "image": "assets/textures/2.webp"
+    },
+    {
+      "id": 3,
+      "type": "bien_bao",
+      "question": "Gặp biển báo này, người tham gia giao thông phải tuân thủ quy tắc nào dưới đây?",
+      "options": [
+        "Cấm rẽ trái",
+        "Biển này cũng cấm xe quay đầu",
+        "Cả 2 phương án trên"
+      ],
+      "answer": "Cả 2 phương án trên",
+      "feedback": "Well done! Biển cấm rẽ trái đồng thời cũng cấm luôn quay đầu xe.",
+      "image": "assets/textures/3.webp"
+    },
+    {
+      "id": 4,
+      "type": "bien_bao",
+      "question": "Bố đang chở bé bằng xe máy đi trên đường và gặp biển báo này. Bố có được phép quay đầu xe máy ở đây không?",
+      "options": [
+        "Không được phép, vì có dấu gạch chéo đỏ là cấm tất cả các xe",
+        "Được phép, vì biển này chỉ cấm xe ô tô và xe 3 bánh thôi",
+        "Chỉ được phép quay đầu vào ban đêm"
+      ],
+      "answer": "Được phép, vì biển này chỉ cấm xe ô tô và xe 3 bánh thôi",
+      "feedback": "Chính xác! Bé quan sát biển báo rất tinh mắt.",
+      "image": "assets/textures/4.webp"
+    },
+    {
+      "id": 5,
+      "type": "bien_bao",
+      "question": "Gặp biển này, bố con mình có được dừng xe để bé bước xuống không?",
+      "options": [
+        "Được (Dừng nhanh rồi đi ngay)",
+        "Không (Phải đi thẳng luôn)",
+        "Được đỗ xe ở đây cả ngày"
+      ],
+      "answer": "Được (Dừng nhanh rồi đi ngay)",
+      "feedback": "Giỏi quá! Biển này cấm đỗ nhưng vẫn cho phép dừng xe nhanh đó.",
+      "image": "assets/textures/5.webp"
+    },
+    {
+      "id": 6,
+      "type": "bien_bao",
+      "question": "Gặp biển này, nếu bé muốn đi qua con đường này thì phải làm sao?",
+      "options": [
+        "Vẫn đạp xe chạy thật nhanh qua",
+        "Xuống xe và dắt bộ đi qua",
+        "Quay xe đi đường khác, không được vào"
+      ],
+      "answer": "Xuống xe và dắt bộ đi qua",
+      "feedback": "Đúng rồi! An toàn là trên hết bé nhé.",
+      "image": "assets/textures/6.webp"
+    },
+    {
+      "id": 7,
+      "type": "bien_bao",
+      "question": "Biển này báo hiệu điều gì?",
+      "options": [
+        "Sắp đến đoạn đường trơn trượt",
+        "Sắp đến đoạn đường có nhiều ổ gà",
+        "Sắp đến chỗ ngoặt nguy hiểm vòng bên trái"
+      ],
+      "answer": "Sắp đến chỗ ngoặt nguy hiểm vòng bên trái",
+      "feedback": "Good job! Bé nhớ nhắc bố mẹ đi chậm lại khi vào chỗ ngoặt nha.",
+      "image": "assets/textures/7.webp"
+    },
+    {
+      "id": 8,
+      "type": "bien_bao",
+      "question": "Biển báo màu xanh này cho phép chúng mình đi theo những hướng nào?",
+      "options": [
+        "Chỉ được đi thẳng",
+        "Chỉ được rẽ phải",
+        "Được đi thẳng và rẽ phải"
+      ],
+      "answer": "Được đi thẳng và rẽ phải",
+      "feedback": "Hoàn toàn chính xác! Bé hiểu biển báo rất rõ.",
+      "image": "assets/textures/8.webp"
+    },
+    {
+      "id": 9,
+      "type": "bien_bao",
+      "question": "Khi gặp biển báo có mũi tên hướng lên trên bị gạch chéo này, bé phải làm gì?",
+      "options": [
+        "Tiếp tục cho xe đi thẳng về phía trước",
+        "Dừng xe lại và đi lùi",
+        "Không được đi thẳng, phải rẽ sang hướng khác"
+      ],
+      "answer": "Không được đi thẳng, phải rẽ sang hướng khác",
+      "feedback": "Tuyệt vời! Gặp biển này là tuyệt đối không được đi thẳng nhé.",
+      "image": "assets/textures/9.webp"
+    },
+    {
+      "id": 10,
+      "type": "bien_bao",
+      "question": "Đố bé biết biển báo hình tròn xanh có hình chiếc kèn này là biển báo gì?",
+      "options": [
+        "Biển báo cấm bóp còi (Bé phải giữ im lặng)",
+        "Biển báo hiệu lệnh: 'Ấn còi' (Bé nhắc bố bóp còi để báo hiệu nhé)",
+        "Biển báo sắp đến cửa hàng bán đồ chơi"
+      ],
+      "answer": "Biển báo hiệu lệnh: 'Ấn còi' (Bé nhắc bố bóp còi để báo hiệu nhé)",
+      "feedback": "Well done! Đáp án chuẩn không cần chỉnh.",
+      "image": "assets/textures/10.webp"
+    },
+    {
+      "id": 11,
+      "type": "bien_bao",
+      "question": "Biển báo này cảnh báo điều gì cho người tham gia giao thông?",
+      "options": [
+        "Sắp đến chỗ giao nhau giữa đường bộ và đường sắt không có rào chắn",
+        "Sắp đến chỗ giao nhau với đường sắt có rào chắn và người điều khiển",
+        "Sắp đến trạm dừng chân của tàu hỏa"
+      ],
+      "answer": "Sắp đến chỗ giao nhau giữa đường bộ và đường sắt không có rào chắn",
+      "feedback": "Chính xác! Khu vực này rất nguy hiểm nên phải quan sát thật kỹ nha.",
+      "image": "assets/textures/11.webp"
+    },
+    {
+      "id": 12,
+      "type": "bien_bao",
+      "question": "Tại đoạn đường đặt biển 'Hướng đi phải theo', phương tiện giao thông được phép thực hiện các hướng đi nào?",
+      "options": [
+        "Chỉ được đi thẳng và rẽ trái",
+        "Được phép quay đầu xe nếu đoạn đường đủ rộng",
+        "Chỉ được đi thẳng và rẽ phải"
+      ],
+      "answer": "Chỉ được đi thẳng và rẽ phải",
+      "feedback": "Good job! Bé chọn đúng rồi.",
+      "image": "assets/textures/12.webp"
+    },
+    {
+      "id": 13,
+      "type": "bien_bao",
+      "question": "Đây là biển gì?",
+      "options": [
+        "Biển báo đường trơn dễ lật xe",
+        "Biển báo bến phà sang sông",
+        "Biển báo kè, vực sâu phía trước"
+      ],
+      "answer": "Biển báo kè, vực sâu phía trước",
+      "feedback": "Tuyệt vời! Bé rất am hiểu các biển báo nguy hiểm.",
+      "image": "assets/textures/13.webp"
+    },
+    {
+      "id": 14,
+      "type": "bien_bao",
+      "question": "Đây là biển báo gì?",
+      "options": [
+        "Biển báo hướng đi phải theo sang phải",
+        "Biển báo tuyến đường cầu vượt cắt qua",
+        "Biển báo giao nhau với đường một chiều"
+      ],
+      "answer": "Biển báo tuyến đường cầu vượt cắt qua",
+      "feedback": "Well done! Bạn đã trả lời đúng.",
+      "image": "assets/textures/14.webp"
+    },
+    {
+      "id": 15,
+      "type": "bien_bao",
+      "question": "Bạn đang điều khiển một chiếc xe gắn máy và gặp biển báo ở đầu đường. Hành vi nào sau đây là đúng luật?",
+      "options": [
+        "Không được đi vào đoạn đường này và phải tìm hướng đi khác",
+        "Được phép đi vào nếu đoạn đường vắng người hoặc đi vào ban đêm",
+        "Tiếp tục đi vào vì biển này chỉ cấm xe mô tô phân khối lớn"
+      ],
+      "answer": "Không được đi vào đoạn đường này và phải tìm hướng đi khác",
+      "feedback": "Giỏi quá! Cứ gặp biển cấm là chúng ta phải tìm đường khác nhé.",
+      "image": "assets/textures/15.webp"
+    },
+    {
+      "id": 16,
+      "type": "bien_bao",
+      "question": "Ý nghĩa đúng nhất của biển báo này là gì?",
+      "options": [
+        "Báo cấm các loại xe cơ giới vượt nhau trên đoạn đường có cắm biển",
+        "Báo hiệu đoạn đường phía trước thường xuyên có xe ô tô dàn hàng ngang",
+        "Báo hiệu sắp đến khu vực bãi đỗ xe ô tô công cộng"
+      ],
+      "answer": "Báo cấm các loại xe cơ giới vượt nhau trên đoạn đường có cắm biển",
+      "feedback": "Chính xác! Đây là biển cấm vượt.",
+      "image": "assets/textures/16.webp"
+    },
+    {
+      "id": 17,
+      "type": "bien_bao",
+      "question": "Khi gặp biển báo có ghi số '40' trong vòng tròn đỏ (biển 127), người lái xe cơ giới phải tuân thủ điều gì?",
+      "options": [
+        "Không được phép chạy quá tốc độ 40 km/h",
+        "Phải chạy đúng tốc độ 40 km/h, không được chậm hơn",
+        "Chỉ được phép chạy dưới 40 km/h vào ban đêm"
+      ],
+      "answer": "Không được phép chạy quá tốc độ 40 km/h",
+      "feedback": "Good job! Đây là biển hạn chế tốc độ tối đa.",
+      "image": "assets/textures/17.webp"
+    },
+    {
+      "id": 18,
+      "type": "bien_bao",
+      "question": "Khi gặp biển báo này, người lái xe cần hiểu như thế nào cho đúng?",
+      "options": [
+        "Báo hiệu bắt đầu vào đoạn đường có nhiều lệnh cấm mới",
+        "Báo hiệu đoạn đường mà mọi lệnh cấm trước đó đều không còn hiệu lực",
+        "Báo hiệu hết đoạn đường dành cho xe ô tô"
+      ],
+      "answer": "Báo hiệu đoạn đường mà mọi lệnh cấm trước đó đều không còn hiệu lực",
+      "feedback": "Tuyệt vời! Đây là biển xóa bỏ mọi lệnh cấm trước đó.",
+      "image": "assets/textures/18.webp"
+    },
+    {
+      "id": 19,
+      "type": "bien_bao",
+      "question": "Đây là biển báo gì?",
+      "options": [
+        "Biển báo cấm quay đầu xe theo hình tròn",
+        "Biển báo hiệu lệnh phải đi vòng quanh đảo an toàn",
+        "Biển báo 'Giao nhau chạy theo vòng xuyến'"
+      ],
+      "answer": "Biển báo 'Giao nhau chạy theo vòng xuyến'",
+      "feedback": "Well done! Bạn nhận diện biển báo rất tốt.",
+      "image": "assets/textures/19.webp"
+    },
+    {
+      "id": 20,
+      "type": "bien_bao",
+      "question": "Khi gặp biển báo này, người điều khiển phương tiện cần thực hiện hành động nào?",
+      "options": [
+        "Phải đi vòng xuyến quanh đảo an toàn theo chiều mũi tên",
+        "Được phép đi thẳng cắt ngang qua đảo an toàn nếu đường vắng",
+        "Phải dừng lại quan sát, nếu không có xe mới được đi tiếp"
+      ],
+      "answer": "Phải đi vòng xuyến quanh đảo an toàn theo chiều mũi tên",
+      "feedback": "Đúng rồi! Đi qua vòng xuyến là phải đi theo chiều mũi tên.",
+      "image": "assets/textures/20.webp"
+    },
+    {
+      "id": 21,
+      "type": "bien_bao",
+      "question": "Bạn đang điều khiển xe đến một ngã tư và gặp biển báo. Trong các hành vi sau, hành vi nào là ĐÚNG quy tắc giao thông?",
+      "options": [
+        "Quan sát nếu không có cảnh sát giao thông thì nhanh chóng rẽ trái",
+        "Cho xe đi thẳng qua ngã tư, sau đó tìm lộ trình khác phù hợp để đến điểm đích",
+        "Bật tín hiệu xin đường và rẽ phải vào đường nhánh để tiết kiệm thời gian"
+      ],
+      "answer": "Cho xe đi thẳng qua ngã tư, sau đó tìm lộ trình khác phù hợp để đến điểm đích",
+      "feedback": "Giỏi quá! Tuân thủ luật giao thông dù không có ai giám sát nhé.",
+      "image": "assets/textures/21.webp"
+    },
+    {
+      "id": 22,
+      "type": "bien_bao",
+      "question": "Đây là biển báo gì?",
+      "options": [
+        "Biển báo đoạn đường dành riêng cho người đi bộ sang đường",
+        "Biển báo 'Trẻ em', báo trước gần đến đoạn đường thường có trẻ em đi ngang qua hoặc tụ tập",
+        "Biển báo cấm trẻ em đi bộ dưới lòng đường"
+      ],
+      "answer": "Biển báo 'Trẻ em', báo trước gần đến đoạn đường thường có trẻ em đi ngang qua hoặc tụ tập",
+      "feedback": "Good job! Khu vực này tài xế luôn phải chú ý giảm tốc độ.",
+      "image": "assets/textures/22.webp"
+    },
+    {
+      "id": 23,
+      "type": "bien_bao",
+      "question": "Biển báo hình tròn màu trắng có viền đỏ dày (Biển 101) có ý nghĩa gì?",
+      "options": [
+        "Đây là biển báo cho phép tất cả các loại xe đi vào thoải mái",
+        "Biển báo 'Đường cấm', báo đường cấm tất cả các loại phương tiện (cơ giới và thô sơ) đi lại cả hai hướng",
+        "Biển báo chỉ cấm xe ô tô, còn xe máy vẫn được đi vào"
+      ],
+      "answer": "Biển báo 'Đường cấm', báo đường cấm tất cả các loại phương tiện (cơ giới và thô sơ) đi lại cả hai hướng",
+      "feedback": "Tuyệt vời! Gặp biển đường cấm là mình không được đi vào đâu nha.",
+      "image": "assets/textures/23.webp"
+    },
+    {
+      "id": 24,
+      "type": "bien_bao",
+      "question": "Biển báo hình tròn màu đỏ, có một gạch ngang trắng ở giữa (Biển 102) có ý nghĩa gì?",
+      "options": [
+        "Đây là biển báo cho phép xe đi vào theo cả hai chiều",
+        "Biển báo 'Cấm đi ngược chiều', cấm tất cả các loại xe đi vào theo chiều đặt biển",
+        "Biển báo sắp đến trạm dừng xe buýt phía trước"
+      ],
+      "answer": "Biển báo 'Cấm đi ngược chiều', cấm tất cả các loại xe đi vào theo chiều đặt biển",
+      "feedback": "Chính xác! Đi ngược chiều là cực kỳ nguy hiểm.",
+      "image": "assets/textures/24.webp"
+    },
+    {
+      "id": 25,
+      "type": "bien_bao",
+      "question": "Biển báo này có ý nghĩa gì?",
+      "options": [
+        "Đây là biển báo chỉ dẫn lối đi vào bãi đỗ xe",
+        "Biển báo 'Hướng đi phải theo', bắt buộc các xe chỉ được rẽ phải",
+        "Biển báo cho phép xe được đi thẳng hoặc rẽ trái thoải mái"
+      ],
+      "answer": "Biển báo 'Hướng đi phải theo', bắt buộc các xe chỉ được rẽ phải",
+      "feedback": "Well done! Bạn đã trả lời hoàn toàn chính xác.",
+      "image": "assets/textures/25.webp"
+    },
+    {
+      "id": 26,
+      "type": "kien_thuc",
+      "question": "Khi đèn tín hiệu giao thông màu vàng bật sáng, người điều khiển phương tiện chưa đến vạch dừng thì phải làm gì?",
+      "options": [
+        "Tiếp tục đi nhưng phải chú ý quan sát tránh gây tai nạn giao thông",
+        "Dừng lại trước vạch dừng",
+        "Được đi tiếp nhưng chỉ được rẽ trái"
+      ],
+      "answer": "Dừng lại trước vạch dừng",
+      "feedback": "Good job! Thấy đèn vàng là phải chuẩn bị dừng lại cho an toàn nha.",
+      "image": ""
+    },
+    {
+      "id": 27,
+      "type": "kien_thuc",
+      "question": "Tại nơi đường giao nhau có báo hiệu đi theo vòng xuyến, người điều khiển phương tiện phải nhường đường như thế nào?",
+      "options": [
+        "Phải nhường đường cho xe đi bên phải",
+        "Xe báo hiệu xin đường trước xe đó được đi trước",
+        "Phải nhường đường cho xe đi bên trái"
+      ],
+      "answer": "Phải nhường đường cho xe đi bên trái",
+      "feedback": "Tuyệt vời! Nhớ nhé: Vào vòng xuyến nhường trái, ngã tư bình thường nhường phải.",
+      "image": ""
+    },
+    {
+      "id": 28,
+      "type": "kien_thuc",
+      "question": "Người tham gia giao thông phải đi như thế nào là đúng quy tắc giao thông?",
+      "options": [
+        "Đi bên phải theo chiều đi của mình",
+        "Đi đúng phần đường quy định",
+        "Chấp hành hệ thống báo hiệu đường bộ",
+        "Tất cả các ý trên"
+      ],
+      "answer": "Tất cả các ý trên",
+      "feedback": "Chính xác! Bé hiểu luật giao thông rất rõ đấy.",
+      "image": ""
+    },
+    {
+      "id": 29,
+      "type": "kien_thuc",
+      "question": "Người ngồi trên xe mô tô hai bánh, ba bánh, xe gắn máy khi tham gia giao thông có được mang vác vật cồng kềnh hay không?",
+      "options": [
+        "Được mang, vác tùy trường hợp cụ thể",
+        "Không được mang, vác",
+        "Được mang, vác nhưng phải đảm bảo an toàn"
+      ],
+      "answer": "Không được mang, vác",
+      "feedback": "Well done! Mang vác cồng kềnh sẽ gây nguy hiểm cho mình và người khác.",
+      "image": ""
+    },
+    {
+      "id": 30,
+      "type": "kien_thuc",
+      "question": "Tại nơi đường giao nhau, khi người điều khiển giao thông ra hiệu lệnh tay giơ thẳng đứng để báo hiệu thì tham gia giao thông phải đi như thế nào?",
+      "options": [
+        "Tất cả các trường hợp trên",
+        "Người tham gia giao thông ở phía trước và ở phía sau người điều khiển giao thông dừng lại; người tham gia giao thông ở phía bên phải và bên trái người điều khiển được đi",
+        "Người tham gia giao thông ở các hướng phải dừng lại"
+      ],
+      "answer": "Người tham gia giao thông ở các hướng phải dừng lại",
+      "feedback": "Giỏi quá! Tay giơ thẳng đứng là hiệu lệnh tất cả dừng lại.",
+      "image": ""
+    },
+    {
+      "id": 31,
+      "type": "kien_thuc",
+      "question": "Người điều khiển xe đạp máy, xe máy điện có bắt buộc đội mũ bảo hiểm không?",
+      "options": [
+        "Không phải đội mũ bảo hiểm",
+        "Phải đội mũ bảo hiểm",
+        "Phải đội mũ bảo hiểm có cài quai đúng quy cách"
+      ],
+      "answer": "Phải đội mũ bảo hiểm có cài quai đúng quy cách",
+      "feedback": "Good job! Đội mũ bảo hiểm để bảo vệ cái đầu thông minh của mình nhé.",
+      "image": ""
+    },
+    {
+      "id": 32,
+      "type": "kien_thuc",
+      "question": "Khi tham gia giao thông tại nơi đường đang được sửa chữa, người lái xe cần phải làm gì?",
+      "options": [
+        "Vẫn điều khiển xe chạy với tốc độ bình thường",
+        "Giảm tốc độ, quan sát biển chỉ dẫn hoặc người chỉ và thực hiện theo",
+        "Tìm chỗ nào đó để lách xe đi qua càng nhanh càng tốt"
+      ],
+      "answer": "Giảm tốc độ, quan sát biển chỉ dẫn hoặc người chỉ và thực hiện theo",
+      "feedback": "Tuyệt vời! Chậm lại một chút để đảm bảo an toàn cho cả công nhân sửa đường.",
+      "image": ""
+    },
+    {
+      "id": 33,
+      "type": "kien_thuc",
+      "question": "Khi ở một khu vực đồng thời có đặt biển báo hiệu cố định và biển báo tạm thời mà ý nghĩa hiệu lực khác nhau, thì người lái xe phải chấp hành biển nào?",
+      "options": [
+        "Biển báo hiệu tạm thời",
+        "Biển báo hiệu cố định",
+        "Không chấp hành biển nào"
+      ],
+      "answer": "Biển báo hiệu tạm thời",
+      "feedback": "Chính xác! Biển báo tạm thời luôn được ưu tiên hơn biển cố định.",
+      "image": ""
+    },
+    {
+      "id": 34,
+      "type": "kien_thuc",
+      "question": "Phương tiện giao thông nào được ưu tiên khi tham gia giao thông?",
+      "options": [
+        "Xe cứu hỏa",
+        "Xe đưa đón học sinh",
+        "Xe chở hàng"
+      ],
+      "answer": "Xe cứu hỏa",
+      "feedback": "Well done! Xe cứu hỏa đang đi làm nhiệm vụ cứu người nên luôn được ưu tiên số 1.",
+      "image": ""
+    },
+    {
+      "id": 35,
+      "type": "kien_thuc",
+      "question": "Đèn tín hiệu giao thông dành cho người đi bộ có mấy màu?",
+      "options": [
+        "1 màu",
+        "2 màu",
+        "3 màu"
+      ],
+      "answer": "2 màu",
+      "feedback": "Good job! Đèn người đi bộ chỉ có màu Xanh (được đi) và Đỏ (dừng lại) thôi nhé.",
+      "image": ""
+    },
+    {
+      "id": 36,
+      "type": "kien_thuc",
+      "question": "Tại nơi đường giao nhau có báo hiệu đi theo vòng xuyến, người điều khiển phương tiện phải nhường đường như thế nào?",
+      "options": [
+        "Phải nhường đường cho xe đi bên phải",
+        "Xe báo hiệu xin đường trước xe đó được đi trước",
+        "Phải nhường đường cho xe đi bên trái"
+      ],
+      "answer": "Phải nhường đường cho xe đi bên trái",
+      "feedback": "Hoàn toàn đúng! Bé nắm quy tắc rất chắc chắn.",
+      "image": ""
+    },
+    {
+      "id": 37,
+      "type": "kien_thuc",
+      "question": "Đặc điểm của biển báo chỉ dẫn là gì?",
+      "options": [
+        "Hình tam giác nền vàng, viền đỏ",
+        "Hình tròn nền xanh",
+        "Hình chữ nhật hoặc hình vuông nền màu xanh lam, ở giữa có hình vẽ hoặc chữ chỉ dẫn màu trắng"
+      ],
+      "answer": "Hình chữ nhật hoặc hình vuông nền màu xanh lam, ở giữa có hình vẽ hoặc chữ chỉ dẫn màu trắng",
+      "feedback": "Tuyệt vời! Bé rất giỏi nhận diện các loại biển báo.",
+      "image": ""
+    },
+    {
+      "id": 38,
+      "type": "sa_hinh",
+      "question": "Theo tín hiệu đèn, xe nào được quyền đi là đúng quy tắc giao thông?",
+      "options": [
+        "Xe khách, mô tô",
+        "Xe con, xe tải",
+        "Xe tải, mô tô"
+      ],
+      "answer": "Xe con, xe tải",
+      "feedback": "Good job! Xử lý sa hình chuẩn xác.",
+      "image": "assets/textures/1.3.webp"
+    },
+    {
+      "id": 39,
+      "type": "sa_hinh",
+      "question": "Theo tín hiệu đèn, xe tải đi theo hướng nào là đúng quy tắc giao thông?",
+      "options": [
+        "Hướng 2, 3, 4",
+        "Hướng 1 và 2",
+        "Chỉ hướng 1"
+      ],
+      "answer": "Chỉ hướng 1",
+      "feedback": "Tuyệt vời! Bé quan sát tín hiệu đèn rất tốt.",
+      "image": "assets/textures/2.3.webp"
+    },
+    {
+      "id": 40,
+      "type": "sa_hinh",
+      "question": "Các xe đi theo hướng mũi tên, xe nào vi phạm quy tắc giao thông?",
+      "options": [
+        "Xe khách, xe tải, mô tô",
+        "Xe tải, xe con, mô tô",
+        "Xe khách, xe con, mô tô"
+      ],
+      "answer": "Xe khách, xe tải, mô tô",
+      "feedback": "Well done! Trả lời đúng rồi.",
+      "image": "assets/textures/3.3.webp"
+    },
+    {
+      "id": 41,
+      "type": "sa_hinh",
+      "question": "Theo hướng mũi tên, những hướng nào xe gắn máy đi được?",
+      "options": [
+        "Cả ba hướng",
+        "Chỉ hướng 1 và 3",
+        "Chỉ hướng 1"
+      ],
+      "answer": "Cả ba hướng",
+      "feedback": "Chính xác! Bé phân tích tình huống rất thông minh.",
+      "image": "assets/textures/4.3.webp"
+    },
+    {
+      "id": 42,
+      "type": "sa_hinh",
+      "question": "Theo hướng mũi tên, gặp biển hướng đi phải theo đặt trước ngã tư, những hướng nào xe được phép đi?",
+      "options": [
+        "Hướng 1 và 3",
+        "Hướng 2 và 3",
+        "Hướng 1, 2 và 3"
+      ],
+      "answer": "Hướng 2 và 3",
+      "feedback": "Good job! Tuân thủ biển hướng đi phải theo là rất quan trọng.",
+      "image": "assets/textures/5.3.webp"
+    },
+    {
+      "id": 43,
+      "type": "sa_hinh",
+      "question": "Xe nào được quyền đi trước trong trường hợp này?",
+      "options": [
+        "Xe mô tô",
+        "Xe con",
+        "Cả hai xe đều được đi"
+      ],
+      "answer": "Xe mô tô",
+      "feedback": "Tuyệt vời! Giải quyết sa hình rất nhanh nhạy.",
+      "image": "assets/textures/6.3.webp"
+    },
+    {
+      "id": 44,
+      "type": "sa_hinh",
+      "question": "Theo hướng mũi tên, những hướng nào ô tô con được phép đi?",
+      "options": [
+        "Hướng 1",
+        "Hướng 1, 3 và 4",
+        "Hướng 2, 3 và 4"
+      ],
+      "answer": "Hướng 1, 3 và 4",
+      "feedback": "Well done! Bạn đã loại trừ hướng cấm rất chính xác.",
+      "image": "assets/textures/7.3.webp"
+    },
+    {
+      "id": 45,
+      "type": "sa_hinh",
+      "question": "Theo hướng mũi tên, những hướng nào xe tải được phép đi?",
+      "options": [
+        "Chỉ hướng 1",
+        "Hướng 1, 3 và 4",
+        "Hướng 1, 2 và 3"
+      ],
+      "answer": "Chỉ hướng 1",
+      "feedback": "Good job! Đáp án này không làm khó được bạn.",
+      "image": "assets/textures/8.3.webp"
+    },
+    {
+      "id": 46,
+      "type": "sa_hinh",
+      "question": "Những hướng nào xe tải được phép đi?",
+      "options": [
+        "Hướng 1",
+        "Cả ba hướng",
+        "Hướng 2 và 3"
+      ],
+      "answer": "Hướng 2 và 3",
+      "feedback": "Chính xác! Bé có vẻ rất có năng khiếu làm cảnh sát giao thông đó.",
+      "image": "assets/textures/9.3.webp"
+    },
+    {
+      "id": 47,
+      "type": "sa_hinh",
+      "question": "Ô tô con đi theo chiều mũi tên có vi phạm quy tắc giao thông không?",
+      "options": [
+        "Vi phạm",
+        "Không vi phạm"
+      ],
+      "answer": "Vi phạm",
+      "feedback": "Tuyệt vời! Lỗi đi sai làn đường là vi phạm nha.",
+      "image": "assets/textures/10.3.webp"
+    },
+    {
+      "id": 48,
+      "type": "dao_duc",
+      "question": "Khi thấy một cụ già đang đứng ở mép đường muốn sang đường giữa lúc xe cộ đông đúc, bé sẽ làm gì?",
+      "options": [
+        "Chạy thật nhanh qua trước để không bị muộn giờ.",
+        "Dừng lại an toàn, hỏi thăm và nhờ người lớn đi cùng giúp cụ sang đường.",
+        "Đứng nhìn và cổ vũ cụ tự đi qua đường."
+      ],
+      "answer": "Dừng lại an toàn, hỏi thăm và nhờ người lớn đi cùng giúp cụ sang đường.",
+      "feedback": "Oa, bé chọn đúng không nào? Bé đúng là một em bé có trái tim ấm áp! Giúp đỡ người lớn tuổi là hành động của một 'hiệp sĩ' thực thụ đó nha!",
+      "image": ""
+    },
+    {
+      "id": 49,
+      "type": "dao_duc",
+      "question": "Trên xe buýt công cộng, khi thấy một cô đang mang bầu hoặc một em nhỏ không có chỗ ngồi, bé nên xử lý thế nào?",
+      "options": [
+        "Giả vờ ngủ để không phải nhường ghế.",
+        "Đợi khi nào họ lên tiếng nhờ vả thì mới đứng dậy.",
+        "Chủ động đứng dậy và vui vẻ mời họ ngồi vào chỗ của mình."
+      ],
+      "answer": "Chủ động đứng dậy và vui vẻ mời họ ngồi vào chỗ của mình.",
+      "feedback": "Đúng rồi! Nhường chỗ là một cử chỉ rất lịch sự. Bé nhường chỗ cho cô mang bầu là đang bảo vệ cả một em bé sắp chào đời nữa đấy, giỏi quá đi!",
+      "image": ""
+    },
+    {
+      "id": 50,
+      "type": "dao_duc",
+      "question": "Nếu thấy bạn của mình đang đá bóng hoặc chơi đùa dưới lòng đường, bé sẽ nói gì với bạn?",
+      "options": [
+        "Nhắc bạn rằng lòng đường rất nguy hiểm, mời bạn vào sân chơi hoặc vỉa hè rộng.",
+        "Vào chơi cùng bạn vì đường lúc này có vẻ vắng xe.",
+        "Không nói gì vì đó là việc riêng của bạn."
+      ],
+      "answer": "Nhắc bạn rằng lòng đường rất nguy hiểm, mời bạn vào sân chơi hoặc vỉa hè rộng.",
+      "feedback": "Chính xác nè! Quan tâm đến sự an toàn của bạn bè là biểu hiện của một người bạn tốt. Bé và bạn cùng chơi trong sân cho an toàn và vui thật là vui nhé!",
+      "image": ""
+    },
+    {
+      "id": 51,
+      "type": "dao_duc",
+      "question": "Khi đi trên xe máy của bố mẹ và vừa uống xong một hộp sữa, bé sẽ làm gì với vỏ hộp đó?",
+      "options": [
+        "Vứt luôn xuống đường cho nhẹ tay.",
+        "Cầm chắc hoặc bỏ vào túi, đợi đến khi thấy thùng rác sẽ bỏ vào.",
+        "Nhét vào các khe hở trên xe của bố mẹ."
+      ],
+      "answer": "Cầm chắc hoặc bỏ vào túi, đợi đến khi thấy thùng rác sẽ bỏ vào.",
+      "feedback": "Yêu quá, bé chọn đúng phải không? Giữ gìn đường phố sạch đẹp giúp các cô chú lao công đỡ vất vả và giúp đường phố mình lung linh hơn đó!",
+      "image": ""
+    },
+    {
+      "id": 52,
+      "type": "dao_duc",
+      "question": "Nghe thấy tiếng còi xe cứu thương đang hú còi xin đường phía sau, xe của bố mẹ nên làm gì?",
+      "options": [
+        "Cố gắng đi thật nhanh để không bị xe cứu thương vượt qua.",
+        "Giảm tốc độ, lánh sang bên phải để nhường đường cho xe cứu thương.",
+        "Dừng lại ngay giữa đường để xem trên xe có ai."
+      ],
+      "answer": "Giảm tốc độ, lánh sang bên phải để nhường đường cho xe cứu thương.",
+      "feedback": "Hoan hô bé! Xe cứu thương đang đi cứu người, mình nhường đường là đang cùng các bác sĩ cứu sống một bệnh nhân đấy, bé thật là có đạo đức!",
+      "image": ""
+    },
+    {
+      "id": 53,
+      "type": "dao_duc",
+      "question": "Khi dừng chờ đèn đỏ, dù đường rất vắng nhưng vẫn còn vài giây nữa mới sang đèn xanh, bé sẽ nhắc bố mẹ thế nào?",
+      "options": [
+        "Cứ đi đi bố mẹ ơi, đường vắng mà!",
+        "Kiên nhẫn chờ đèn xanh bật lên rồi mới đi để đảm bảo an toàn.",
+        "Bảo bố mẹ đi thật chậm qua đèn đỏ."
+      ],
+      "answer": "Kiên nhẫn chờ đèn xanh bật lên rồi mới đi để đảm bảo an toàn.",
+      "feedback": "Bé giỏi lắm! Kiên nhẫn một chút để ai cũng được an toàn. Bé là 'người giám sát' giao thông tí hon cực kỳ trách nhiệm của bố mẹ đấy!",
+      "image": ""
+    },
+    {
+      "id": 54,
+      "type": "dao_duc",
+      "question": "Khi đi bộ qua đường trên vạch kẻ dành cho người đi bộ, có một chú lái xe ô tô dừng lại nhường đường cho bé, bé sẽ làm gì?",
+      "options": [
+        "Cúi đầu nhẹ hoặc vẫy tay cảm ơn chú rồi nhanh chóng đi qua.",
+        "Đi thật chậm hoặc dừng lại giữa đường trêu chọc chú.",
+        "Coi như không thấy gì và lẳng lặng đi qua."
+      ],
+      "answer": "Cúi đầu nhẹ hoặc vẫy tay cảm ơn chú rồi nhanh chóng đi qua.",
+      "feedback": "Một cái cúi đầu hay vẫy tay sẽ làm chú lái xe vui cả ngày luôn. Lời cảm ơn giúp giao thông chúng mình thân thiện như một gia đình vậy!",
+      "image": ""
+    },
+    {
+      "id": 55,
+      "type": "dao_duc",
+      "question": "Tại sao chúng ta không nên bấm còi inh ỏi khi đi vào các ngõ nhỏ lúc đêm muộn hoặc khi đang tắc đường?",
+      "options": [
+        "Vì bấm còi nhiều sẽ tốn điện của xe.",
+        "Vì âm thanh quá lớn gây chói tai và làm phiền sự yên tĩnh của mọi người.",
+        "Vì bấm còi sẽ làm xe hỏng nhanh hơn."
+      ],
+      "answer": "Vì âm thanh quá lớn gây chói tai và làm phiền sự yên tĩnh của mọi người.",
+      "feedback": "Đúng rồi! Bé rất biết nghĩ cho người khác nè. Sự yên tĩnh giúp các bạn nhỏ khác ngủ ngon và người già không bị giật mình đó bé yêu.",
+      "image": ""
+    },
+    {
+      "id": 56,
+      "type": "dao_duc",
+      "question": "Chẳng may khi đi bộ bé va chạm nhẹ vào người khác, dù không ai bị đau, bé nên làm gì?",
+      "options": [
+        "Quay lại trách mắng người kia tại sao không nhìn đường.",
+        "Bỏ chạy thật nhanh vì sợ bị mắng.",
+        "Dừng lại, hỏi thăm người kia có sao không và nói lời xin lỗi chân thành."
+      ],
+      "answer": "Dừng lại, hỏi thăm người kia có sao không và nói lời xin lỗi chân thành.",
+      "feedback": "Lời xin lỗi chính là 'phép thuật' làm mọi chuyện trở nên nhẹ nhàng. Bé biết nhận lỗi và quan tâm người khác là em bé tuyệt vời nhất!",
+      "image": ""
+    },
+    {
+      "id": 57,
+      "type": "dao_duc",
+      "question": "Theo bé, chúng mình tuân thủ luật giao thông và cư xử lịch sự để làm gì?",
+      "options": [
+        "Để không bị các chú Cảnh sát giao thông phạt tiền bố mẹ.",
+        "Để bảo vệ an toàn cho chính mình, gia đình và tất cả mọi người.",
+        "Để được mọi người khen là bé ngoan."
+      ],
+      "answer": "Để bảo vệ an toàn cho chính mình, gia đình và tất cả mọi người.",
+      "feedback": "Câu trả lời này là quan trọng nhất nè! An toàn là trên hết. Bé hãy cùng mọi người xây dựng những con đường hạnh phúc nhé. Yêu bé rất nhiều!",
+      "image": ""
+    },
+    {
+      "id": 58,
+      "type": "khai_niem",
+      "question": "Theo luật giao thông, 'Người tham gia giao thông' bao gồm những ai?",
+      "options": [
+        "Chỉ những người lái xe ô tô và xe máy.",
+        "Chỉ những người đi bộ trên đường.",
+        "Tất cả người điều khiển, người sử dụng phương tiện và người đi bộ trên đường."
+      ],
+      "answer": "Tất cả người điều khiển, người sử dụng phương tiện và người đi bộ trên đường.",
+      "feedback": "Đúng rồi, là ý (c) đó bé yêu! Dù bé đi bộ, đi xe đạp hay ngồi sau xe mẹ, bé đều là một thành viên của giao thông đấy. Hãy cùng nhau đi đứng thật cẩn thận nhé! Giỏi quá!",
+      "image": ""
+    },
+    {
+      "id": 59,
+      "type": "khai_niem",
+      "question": "Khi đi đường, nếu thấy tín hiệu đèn giao thông màu vàng bật sáng (không phải đèn vàng nhấp nháy), bé nhắc bố mẹ nên làm gì?",
+      "options": [
+        "Phải dừng lại trước vạch dừng (trừ trường hợp đã đi quá vạch).",
+        "Nhấn ga thật nhanh để vượt qua trước khi đèn chuyển sang đỏ.",
+        "Cứ đi tiếp vì đèn vàng chưa phải là đèn đỏ."
+      ],
+      "answer": "Phải dừng lại trước vạch dừng (trừ trường hợp đã đi quá vạch).",
+      "feedback": "Đáp án (a) chính xác rồi! Đèn vàng là để chúng mình chuẩn bị dừng lại đấy. Bé nhắc bố mẹ chờ một chút để cả nhà mình luôn an toàn nhé. Bé đúng là 'cảnh sát nhí' tận tâm!",
+      "image": ""
+    },
+    {
+      "id": 60,
+      "type": "khai_niem",
+      "question": "Bé và các bạn được phép đi bộ sang đường ở đâu là an toàn và đúng luật nhất?",
+      "options": [
+        "Bất cứ chỗ nào vắng xe để sang cho nhanh.",
+        "Ở nơi có vạch kẻ đường dành cho người đi bộ, cầu vượt hoặc hầm cho người đi bộ.",
+        "Đi chéo qua giữa ngã tư để rút ngắn quãng đường."
+      ],
+      "answer": "Ở nơi có vạch kẻ đường dành cho người đi bộ, cầu vượt hoặc hầm cho người đi bộ.",
+      "feedback": "Chính xác là (b) nè! Những vạch trắng trên đường giống như một chiếc cầu an toàn dành riêng cho bé vậy. Bé nhớ luôn đi vào đó và nắm tay người lớn nhé. Yêu bé nhiều!",
+      "image": ""
+    },
+    {
+      "id": 61,
+      "type": "khai_niem",
+      "question": "Trên đường đi học, bé thấy một chú Cảnh sát giao thông ra hiệu lệnh bằng tay khác với đèn tín hiệu. Bé nên tuân theo ai?",
+      "options": [
+        "Tuân theo đèn tín hiệu giao thông.",
+        "Tuân theo hiệu lệnh của chú Cảnh sát giao thông.",
+        "Tự quan sát thấy hướng nào ít xe thì đi."
+      ],
+      "answer": "Tuân theo hiệu lệnh của chú Cảnh sát giao thông.",
+      "feedback": "Bé chọn (b) là cực kỳ thông minh! Chú Cảnh sát giao thông là người điều phối quan trọng nhất tại hiện trường. Tuân thủ chú là giúp đường phố không bị tắc đấy. Bé giỏi lắm!",
+      "image": ""
+    },
+    {
+      "id": 62,
+      "type": "khai_niem",
+      "question": "Khái niệm 'Khổ giới hạn của đường bộ' được hiểu như thế nào cho đúng nhỉ?",
+      "options": [
+        "Là khoảng trống có kích thước giới hạn về chiều cao và chiều rộng để xe đi qua an toàn.",
+        "Là chiều dài của con đường từ điểm đầu đến điểm cuối.",
+        "Là tốc độ tối đa mà xe được phép chạy trên đường."
+      ],
+      "answer": "Là khoảng trống có kích thước giới hạn về chiều cao và chiều rộng để xe đi qua an toàn.",
+      "feedback": "Oa, câu này hơi khó mà bé vẫn chọn đúng (a) kìa! Giống như việc bé đi qua một cái cổng, xe cũng cần biết chiều cao, chiều rộng để không bị kẹt. Bé học luật siêu quá đi!",
+      "image": ""
+    },
+    {
+      "id": 63,
+      "type": "khai_niem",
+      "question": "Khi đi bộ trên đường không có vỉa hè, bé và các bạn phải đi như thế nào?",
+      "options": [
+        "Đi ở chính giữa lòng đường cho thoáng.",
+        "Đi sát mép đường về phía tay phải của mình.",
+        "Đi sát mép đường bên trái để nhìn rõ xe đi ngược lại."
+      ],
+      "answer": "Đi sát mép đường về phía tay phải của mình.",
+      "feedback": "Đúng rồi, là (b) đó bé ơi! Luôn đi sát mép đường bên phải để nhường đường cho các xe khác nhé. Bé nhớ chú ý quan sát xung quanh nữa nha, giỏi lắm!",
+      "image": ""
+    },
+    {
+      "id": 64,
+      "type": "khai_niem",
+      "question": "'Đường ưu tiên' là loại đường như thế nào?",
+      "options": [
+        "Là đường dành riêng cho xe ô tô hạng sang.",
+        "Là đường mà phương tiện trên đó được các phương tiện từ hướng khác nhường đường khi qua nơi giao nhau.",
+        "Là đường rộng nhất trong thành phố."
+      ],
+      "answer": "Là đường mà phương tiện trên đó được các phương tiện từ hướng khác nhường đường khi qua nơi giao nhau.",
+      "feedback": "Hoan hô bé, đáp án là (b)! Khi đi từ đường nhỏ ra đường lớn (đường ưu tiên), mình phải chậm lại nhường đường bé nhé. Bé am hiểu quy tắc thật đấy!",
+      "image": ""
+    },
+    {
+      "id": 65,
+      "type": "khai_niem",
+      "question": "Khi ngồi trên xe máy, bé cần thực hiện quy tắc an toàn nào sau đây?",
+      "options": [
+        "Không cần đội mũ bảo hiểm nếu đi quãng đường ngắn.",
+        "Đội mũ bảo hiểm cài quai đúng quy cách và bám chặt vào người lớn.",
+        "Đứng lên yên xe để nhìn đường cho rõ."
+      ],
+      "answer": "Đội mũ bảo hiểm cài quai đúng quy cách và bám chặt vào người lớn.",
+      "feedback": "Chắc chắn là (b) rồi! Chiếc mũ bảo hiểm xinh xắn sẽ bảo vệ cái đầu thông minh của bé đấy. Cài quai 'tách' một cái là bé đã sẵn sàng cho chuyến đi an toàn rồi!",
+      "image": ""
+    },
+    {
+      "id": 66,
+      "type": "khai_niem",
+      "question": "Người lái xe chỉ được phép bấm còi trong trường hợp nào khi đi trong đô thị (từ 5h sáng đến 22h đêm)?",
+      "options": [
+        "Bấm còi thật to để mọi người tránh đường cho mình đi nhanh.",
+        "Bấm còi liên tục khi đang bị tắc đường cho đỡ sốt ruột.",
+        "Chỉ bấm còi để báo hiệu cho người khác khi cần thiết và không gây phiền hà."
+      ],
+      "answer": "Chỉ bấm còi để báo hiệu cho người khác khi cần thiết và không gây phiền hà.",
+      "feedback": "Lại đúng nữa rồi, là (c)! Tiếng còi văn minh là tiếng còi đúng lúc. Bé nhắc mọi người đừng bấm còi inh ỏi để đường phố mình thật yên bình nhé. Bé ngoan quá!",
+      "image": ""
+    },
+    {
+      "id": 67,
+      "type": "khai_niem",
+      "question": "'Làn đường' được hiểu là gì?",
+      "options": [
+        "Là toàn bộ bề mặt con đường nhựa.",
+        "Là một phần của phần đường xe chạy được chia theo chiều dọc, có đủ bề rộng cho xe chạy an toàn.",
+        "Là vỉa hè dành cho người đi bộ."
+      ],
+      "answer": "Là một phần của phần đường xe chạy được chia theo chiều dọc, có đủ bề rộng cho xe chạy an toàn.",
+      "feedback": "Câu chốt hạ bé chọn (b) là hoàn toàn chính xác! Mỗi loại xe có một 'làn' riêng giống như mỗi bạn nhỏ có một chỗ ngồi trong lớp vậy. Bé nắm vững kiến thức thế này thì chắc chắn sẽ là người tham gia giao thông kiểu mẫu rồi!",
+      "image": ""
+    },
+    {
+      "id": 68,
+      "type": "khai_niem",
+      "question": "Đèn vàng bật, xe đã sát vạch dừng, phía sau có xe đi gần. Lựa chọn nào an toàn nhất?",
+      "options": [
+        "Phanh gấp để dừng",
+        "Đi tiếp qua giao lộ",
+        "Dừng giữa đường"
+      ],
+      "answer": "Đi tiếp qua giao lộ",
+      "feedback": "PRO trap: Không phải lúc nào đèn vàng cũng phải dừng. Nếu dừng nguy hiểm thì phải đi tiếp an toàn."
+    },
+    {
+      "id": 69,
+      "type": "khai_niem",
+      "question": "Bạn chuẩn bị qua đường, thấy xe còn xa nhưng chạy nhanh. Điều nào đúng nhất?",
+      "options": [
+        "Chạy nhanh qua",
+        "Đợi xe qua rồi mới sang",
+        "Giơ tay rồi đi"
+      ],
+      "answer": "Đợi xe qua rồi mới sang",
+      "feedback": "Không chỉ nhìn khoảng cách mà phải đánh giá tốc độ – đây là bẫy phổ biến."
+    },
+    {
+      "id": 70,
+      "type": "khai_niem",
+      "question": "Xe phía trước bật xi nhan nhưng không giảm tốc. Điều nào hợp lý nhất?",
+      "options": [
+        "Xe chắc chắn sẽ rẽ",
+        "Xe có thể chưa rẽ ngay hoặc quên tắt xi nhan",
+        "Xe đang báo nguy hiểm"
+      ],
+      "answer": "Xe có thể chưa rẽ ngay hoặc quên tắt xi nhan",
+      "feedback": "Không tin hoàn toàn tín hiệu – phải quan sát hành vi xe."
+    },
+    {
+      "id": 71,
+      "type": "khai_niem",
+      "question": "Đèn xanh nhưng phía trước bị tắc, nếu đi sẽ đứng giữa giao lộ. Nên làm gì?",
+      "options": [
+        "Đi vì đèn xanh",
+        "Dừng lại trước giao lộ",
+        "Đi chậm vào giữa rồi dừng"
+      ],
+      "answer": "Dừng lại trước giao lộ",
+      "feedback": "Trap cực mạnh: Đèn xanh chưa chắc được đi nếu không thoát được giao lộ."
+    },
+    {
+      "id": 72,
+      "type": "khai_niem",
+      "question": "Xe phía trước dừng đột ngột nhưng không bật đèn cảnh báo. Điều nào đúng?",
+      "options": [
+        "Bấm còi rồi vượt ngay",
+        "Giữ khoảng cách và quan sát",
+        "Phanh gấp rồi đứng sát sau"
+      ],
+      "answer": "Giữ khoảng cách và quan sát",
+      "feedback": "Không biết phía trước có gì → luôn ưu tiên an toàn."
+    },
+    {
+      "id": 73,
+      "type": "khai_niem",
+      "question": "Khi đi cạnh xe tải lớn đang rẽ, điều nào nguy hiểm nhất?",
+      "options": [
+        "Đi phía trước xa",
+        "Đi sát bên hông xe",
+        "Đi phía sau xa"
+      ],
+      "answer": "Đi sát bên hông xe",
+      "feedback": "Điểm mù + xe quẹo → cực kỳ nguy hiểm."
+    },
+    {
+      "id": 74,
+      "type": "khai_niem",
+      "question": "Qua đường có dải phân cách, gần đó không có chỗ sang hợp lệ. Nên làm gì?",
+      "options": [
+        "Leo qua nhanh",
+        "Đi vòng đến nơi cho phép",
+        "Chờ ít xe rồi vượt"
+      ],
+  "answer": "Đi vòng đến nơi cho phép",
+      "feedback": "Trap: Nhanh chưa chắc an toàn – phải đúng luật."
+    },
+    {
+      "id": 75,
+      "type": "khai_niem",
+      "question": "Xe phía sau bấm còi liên tục khi đường đông. Điều nào hợp lý nhất?",
+      "options": [
+        "Họ muốn vượt ngay",
+        "Họ đang cảnh báo hoặc xin đường",
+        "Không cần chú ý"
+      ],
+      "answer": "Họ đang cảnh báo hoặc xin đường",
+      "feedback": "Còi không chỉ để vượt mà còn để cảnh báo nguy hiểm."
+    },
+    {
+      "id": 76,
+      "type": "khai_niem",
+      "question": "Trời mưa, đường trơn, xe phía trước phanh. Cách xử lý nào an toàn nhất?",
+      "options": [
+        "Phanh gấp theo",
+        "Giảm tốc từ từ và giữ khoảng cách",
+        "Đánh lái tránh gấp"
+      ],
+      "answer": "Giảm tốc từ từ và giữ khoảng cách",
+      "feedback": "Trap: Phanh gấp hoặc đánh lái đều dễ trượt."
+    },
+    {
+      "id": 77,
+      "type": "khai_niem",
+      "question": "Thấy bóng lăn ra đường từ giữa các xe đỗ. Điều gì có khả năng xảy ra?",
+      "options": [
+        "Không có gì",
+        "Có trẻ em chạy theo",
+        "Chỉ là đồ vật"
+      ],
+      "answer": "Có trẻ em chạy theo",
+      "feedback": "Đây là bẫy kinh điển trong đào tạo lái xe."
+    },
+    {
+      "id": 78,
+      "type": "khai_niem",
+      "question": "Ngã tư không đèn: xe bạn và xe bên phải cùng đến gần như nhau. Ai đi trước?",
+      "options": [
+        "Xe bạn",
+        "Xe bên phải",
+        "Xe nhanh hơn"
+      ],
+      "answer": "Xe bên phải",
+      "feedback": "Quy tắc nhường bên phải – câu hay bị sai."
+    },
+    {
+      "id": 79,
+      "type": "khai_niem",
+      "question": "Xe phía trước bật đèn cảnh báo và dừng sát lề. Điều nào cần chú ý nhất?",
+      "options": [
+        "Xe sẽ đi ngay",
+        "Có thể có người mở cửa hoặc bước xuống",
+        "Không ảnh hưởng"
+      ],
+      "answer": "Có thể có người mở cửa hoặc bước xuống",
+      "feedback": "Nguy hiểm đến từ hành động bất ngờ."
+    },
+    {
+      "id": 80,
+      "type": "khai_niem",
+      "question": "Xuống dốc dài, cách nào an toàn nhất?",
+      "options": [
+        "Tăng tốc để xuống nhanh",
+        "Giữ tốc độ ổn định, kiểm soát phanh",
+        "Tắt máy"
+      ],
+      "answer": "Giữ tốc độ ổn định, kiểm soát phanh",
+      "feedback": "Trap: Tắt máy mất kiểm soát."
+    },
+    {
+      "id": 81,
+      "type": "khai_niem",
+      "question": "Xe buýt vừa dừng, phía trước bị che khuất. Nên làm gì?",
+      "options": [
+        "Đi nhanh qua",
+        "Giảm tốc và quan sát kỹ",
+        "Bấm còi rồi vượt"
+      ],
+      "answer": "Giảm tốc và quan sát kỹ",
+      "feedback": "Có thể có người băng qua phía trước xe buýt."
+    },
+    {
+      "id": 82,
+      "type": "khai_niem",
+  "question": "Trong bãi xe, xe đang lùi nhưng chưa thấy bạn. Nên làm gì?",
+      "options": [
+        "Đi nhanh qua sau xe",
+        "Đứng lại và tránh xa",
+        "Gọi tài xế"
+      ],
+      "answer": "Đứng lại và tránh xa",
+      "feedback": "Điểm mù khi lùi xe rất nguy hiểm."
+    },
+    {
+      "id": 83,
+      "type": "khai_niem",
+      "question": "Đèn xanh sắp chuyển vàng, xe còn cách xa vạch. Nên làm gì?",
+      "options": [
+        "Tăng tốc vượt",
+        "Chuẩn bị dừng",
+        "Đi chậm qua"
+      ],
+      "answer": "Chuẩn bị dừng",
+      "feedback": "Trap: Không nên cố vượt khi chưa gần vạch."
+    },
+    {
+      "id": 84,
+      "type": "khai_niem",
+      "question": "Đi qua giao lộ đông, điều nào quan trọng nhất?",
+      "options": [
+        "Đi nhanh",
+        "Quan sát tất cả hướng",
+        "Bấm còi"
+      ],
+      "answer": "Quan sát tất cả hướng",
+      "feedback": "Không chỉ nhìn phía trước."
+    },
+    {
+      "id": 85,
+      "type": "khai_niem",
+      "question": "Đường vắng, không thấy xe. Hành động đúng?",
+      "options": [
+        "Qua ngay",
+        "Vẫn quan sát kỹ hai bên",
+        "Chỉ nhìn một phía"
+      ],
+      "answer": "Vẫn quan sát kỹ hai bên",
+      "feedback": "Nguy hiểm thường đến bất ngờ."
+    },
+    {
+      "id": 86,
+      "type": "khai_niem",
+      "question": "Vừa đi xe vừa quay lại nói chuyện phía sau. Điều gì xảy ra?",
+      "options": [
+        "Không sao",
+        "Mất kiểm soát và nguy hiểm",
+        "Chỉ nguy hiểm khi nhanh"
+      ],
+      "answer": "Mất kiểm soát và nguy hiểm",
+      "feedback": "Mất tập trung = nguy cơ cao nhất."
+    },
+    {
+      "id": 87,
+      "type": "khai_niem",
+      "question": "Trong mọi tình huống giao thông, nguyên tắc ưu tiên cao nhất là gì?",
+      "options": [
+        "Nhanh",
+        "Đúng luật và an toàn",
+        "Đi trước"
+      ],
+      "answer": "Đúng luật và an toàn",
+      "feedback": "Câu boss: Luật + an toàn luôn đứng đầu."
+    }
+]
+}
+
+
+

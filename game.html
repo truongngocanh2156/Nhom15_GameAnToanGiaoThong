@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>An Toàn Giao Thông</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <div id="video-end-container" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:black; z-index:9999; justify-content:center; align-items:center;">
+    <video id="video-end" style="width:100%; height:100%; object-fit: contain;"></video>
+    <button id="btn-ok-end" style="position:absolute; bottom:30px; right:30px; padding:15px 40px; background:#2ecc71; color:white; border:none; border-radius:8px; font-weight:bold; cursor:pointer; font-size:18px;">OK</button>
+</div>
+
+<div id="summary-overlay" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:rgba(255,255,255,0.95); padding:40px; border-radius:20px; text-align:center; z-index:10000; border: 4px solid #3498db; min-width: 300px; color: #333;">
+    <h1 id="sum-status" style="margin-top:0;"></h1>
+    <p style="font-size: 20px;">Điểm số: <span id="sum-score" style="font-weight:bold; color:#e67e22;"></span></p>
+    <p style="font-size: 20px;">Thời gian chơi: <span id="sum-time" style="font-weight:bold; color:#27ae60;"></span></p>
+    <button onclick="location.reload()" style="margin-top:20px; padding:10px 20px; cursor:pointer; background:#3498db; color:white; border:none; border-radius:5px;">Chơi lại</button>
+    <button onclick="window.location.href='index.html'" style="margin-top:20px; padding:10px 20px; cursor:pointer; background:#95a5a6; color:white; border:none; border-radius:5px;">Trang chủ</button>
+</div>
+    <script>
+    // Kiểm tra xem người chơi có đi từ Gara sang không
+        if (sessionStorage.getItem('coVeVaoGame') !== 'true') {
+            // Nếu không có vé (do F5 hoặc gõ thẳng link) -> Đá về trang chủ
+            window.location.href = 'index.html';
+        } else {
+            // Nếu có vé -> Thu lại vé luôn (để nếu lỡ F5 thì mất vé, bị đá về)
+            sessionStorage.removeItem('coVeVaoGame');
+        }
+
+    </script>
+    <script>
+        // Bọc trong sự kiện DOMContentLoaded để chắc chắn trang web đã hiện ra hết mới lấy chuột
+        document.addEventListener('DOMContentLoaded', () => {
+            const customCursor = document.getElementById('custom-cursor');
+            let lastSparkleX = 0, lastSparkleY = 0;
+
+            // Bộ hạt pixel
+            const pixelAssets = [
+                { url: `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 10"><path d="M2,0h2v1H2zM7,0h2v1H7zM1,1h4v1H1zM6,1h4v1H6zM0,2h11v3H0zM1,5h9v1H1zM2,6h7v1H2zM3,7h5v1H3zM4,8h3v1H4zM5,9h1v1H5z" fill="%23b49eff"/></svg>`, size: 18 },
+                { url: `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 7"><path d="M3,0h1v2h2v1H4v2H3V3H1V2h2z" fill="%23ffec6e"/></svg>`, size: 14 },
+                { url: `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 7"><path d="M3,0h1v2h2v1H4v2H3V3H1V2h2z" fill="%23ff9ebb"/></svg>`, size: 14 },
+                { url: `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 7"><path d="M3,0h1v2h2v1H4v2H3V3H1V2h2z" fill="%239edfff"/></svg>`, size: 14 }
+            ];
+
+            function createSparkle(x, y, isBurst = false) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                const asset = pixelAssets[Math.floor(Math.random() * pixelAssets.length)];
+                sparkle.style.backgroundImage = `url('${asset.url}')`;
+                
+                const scale = Math.random() * 0.5 + 0.8; 
+                const finalSize = asset.size * scale;
+                
+                sparkle.style.width = finalSize + 'px';
+                sparkle.style.height = finalSize + 'px';
+                
+                const offsetX = (Math.random() - 0.5) * 15;
+                const offsetY = (Math.random() - 0.5) * 15;
+                
+                // Ép vị trí cố định để hạt không bị lệch
+                sparkle.style.position = 'fixed';
+                sparkle.style.pointerEvents = 'none';
+                sparkle.style.zIndex = '9998';
+                sparkle.style.left = (x + offsetX - finalSize/2) + 'px'; 
+                sparkle.style.top = (y + offsetY - finalSize/2) + 'px';
+                
+                const spreadRadius = isBurst ? 100 : 40; 
+                const endX = (Math.random() - 0.5) * 2 * spreadRadius; 
+                const endY = (Math.random() - 0.5) * 2 * spreadRadius + (isBurst ? 0 : 30); 
+                
+                sparkle.style.setProperty('--end-x', `${endX}px`);
+                sparkle.style.setProperty('--end-y', `${endY}px`);
+                
+                const duration = 0.6 + Math.random() * 0.6; 
+                sparkle.style.animationDuration = duration + 's';
+                
+                document.body.appendChild(sparkle);
+                setTimeout(() => { sparkle.remove(); }, duration * 1000);
+            }
+
+            // Bắt sự kiện chuột di chuyển
+            document.addEventListener('mousemove', (e) => {
+                const mouseX = e.clientX; 
+                const mouseY = e.clientY;
+                
+                // Ép đũa phép đi theo chuột
+                if (customCursor) {
+                    customCursor.style.left = mouseX + 'px';
+                    customCursor.style.top = mouseY + 'px';
+                }
+
+                // Tạo hạt lấp lánh khi di chuyển xa
+                const distance = Math.hypot(mouseX - lastSparkleX, mouseY - lastSparkleY);
+                if (distance > 15) {
+                    createSparkle(mouseX, mouseY);
+                    lastSparkleX = mouseX;
+                    lastSparkleY = mouseY;
+                }
+            });
+
+            // Bắt sự kiện click chuột
+            document.addEventListener('mousedown', (e) => {
+                if (customCursor) customCursor.style.transform = 'translate(-10%, -10%) scale(0.8) rotate(-10deg)';
+                for(let i = 0; i < 12; i++) {
+                    createSparkle(e.clientX, e.clientY, true);
+                }
+            });
+
+            document.addEventListener('mouseup', () => {
+                if (customCursor) customCursor.style.transform = 'translate(-10%, -10%) scale(1) rotate(0deg)';
+            });
+        });
+    </script>
+</head>
+<body>
+  
+    <img src="assets/textures/Cursor.png" id="custom-cursor" style="position: fixed; top: 0; left: 0; width: 45px; height: 45px; pointer-events: none; z-index: 99999; transform: translate(-10%, -10%); transition: transform 0.05s linear;">
+    <div id="intro-video-container">
+        <video id="intro-video" playsinline>
+            <source src="assets/textures/Vid.mp4" type="video/mp4">
+            Trình duyệt của bạn không hỗ trợ video.
+        </video>
+        <button id="btn-skip-video">Bỏ qua (Skip) ⏩</button>
+    </div>
+
+    <div id="ui">
+        <h3>An Toàn Giao Thông</h3>
+        <p id="mapNameDisplay" style="font-weight: bold; color: #f1c40f;"></p>
+        <p>Thời gian: <span id="timeDisplay" class="time">60</span> s</p>
+        <p>Tốc độ: <span id="speedDisplay" class="highlight">0</span> km/h</p>
+        <p>Điểm: <span id="scoreDisplay">0/3</span></p>
+        <p style="font-size: 11px; color: #aaa;">Sử dụng WASD hoặc Mũi tên để lái xe</p>
+        <div id="warning">⚠️ VA CHẠM!</div>
+        <div id="success">✅ HOÀN THÀNH!</div>
+    </div>
+
+    <div id="quiz-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:9998;"></div>
+
+    <div id="quiz" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); z-index:9999; width:800px; min-height:500px; background-image: url('assets/images/khung_cau_hoi.png'); background-size: 100% 100%; padding: 60px; box-sizing: border-box; text-align: center;">
+        <div style="display: flex; flex-direction: column; height: 100%; justify-content: center;">
+            <h2 id="quiz-question" style="color: #ffffff; font-size: 32px; margin-bottom: 20px; text-shadow: 2px 2px 8px #000; line-height: 1.4;"></h2>
+            
+            <img id="quiz-image" src="" style="max-width:250px; border-radius: 10px; display:none; margin: 0 auto 20px auto; border: 3px solid white;">
+            
+            <div id="quiz-answers" style="display: flex; flex-direction: column; gap: 12px; width: 100%; align-items: center;">
+                </div>
+        </div>
+    </div>
+    
+    <div id="end-screen">
+        <h2>🎉 Hoàn thành!</h2>
+        <button id="btn-replay">🔁 Chơi lại</button>
+        <button id="btn-next">➡️ Chơi tiếp</button>
+        <button id="btn-home">🏠 Trang chủ</button>
+    </div>
+
+    <div id="traffic-warning-box" style="display:none; position:fixed; top:20%; left:50%; transform:translate(-50%, -50%); z-index:10001; text-align:center;">
+        <img id="warning-image" src="" style="width: 500px; height: auto; border-radius: 10px; border: 4px solid white; box-shadow: 0 0 30px rgba(0,0,0,0.8);">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script type="module" src="js/Game.js"></script>
+</body>
+</html>
