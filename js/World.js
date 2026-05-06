@@ -198,15 +198,15 @@ export class World {
                     road.position.set(x, 0, z);
                     road.receiveShadow = true;
                     this.scene.add(road);
-                        if (val === 11) {
-                            const marker = new THREE.Mesh(
-                                new THREE.CircleGeometry(this.cellSize / 3, 32),
-                                new THREE.MeshBasicMaterial({ color: 0xffff00, transparent: true, opacity: 0.25 })
-                            );
-                            marker.rotation.x = -Math.PI / 2;
-                            marker.position.set(x, 0.02, z);
-                            this.scene.add(marker);
-                        }
+                        //if (val === 11) {
+                        //    const marker = new THREE.Mesh(
+                        //        new THREE.CircleGeometry(this.cellSize / 3, 32),
+                        //        new THREE.MeshBasicMaterial({ color: 0xffff00, transparent: true, opacity: 0.25 })
+                        //    );
+                        //    marker.rotation.x = -Math.PI / 2;
+                        //    marker.position.set(x, 0.02, z);
+                        //    this.scene.add(marker);
+                       // }
                 } 
                 else if (val === 67) {
                     const junctionGeom = new THREE.PlaneGeometry(this.cellSize, this.cellSize);
